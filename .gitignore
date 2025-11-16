@@ -1,0 +1,14 @@
+# .NET MAUI ve C# için temel .gitignore
+
+# Derleme çıktıları
+**/bin/
+**/obj/
+
+# Visual Studio ayarları
+.vs/
+*.suo
+*.user
+
+# İşletim sistemi dosyaları
+.DS_Store
+Thumbs.db

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+  </style>
+
+  <style name="Maui.SplashTheme" parent="Theme.SplashScreen">
+    <item name="windowSplashScreenBackground">@color/colorPrimary</item>
+
+    <item name="windowSplashScreenAnimatedIcon">@drawable/maui_splash_image</item>
+
+    <item name="postSplashScreenTheme">@style/AppTheme</item> 
+  </style>
+</resources>
