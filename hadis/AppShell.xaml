@@ -15,7 +15,9 @@
         <Tab Title="Kuran" Icon="saat_simgesi.png">
             <ShellContent ContentTemplate="{DataTemplate local:KuranPDF}" />
         </Tab>
-
+        <Tab Title="Zikirmatik" Icon="saat_simgesi.png">
+            <ShellContent ContentTemplate="{DataTemplate local:zikirmatik}" />
+        </Tab>
 
 
     </TabBar>

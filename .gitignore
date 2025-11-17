@@ -8,6 +8,7 @@
 .vs/
 *.suo
 *.user
+*.apk
 
 # İşletim sistemi dosyaları
 .DS_Store
