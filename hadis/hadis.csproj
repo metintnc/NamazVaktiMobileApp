@@ -45,12 +45,15 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\gemini2.png" Color="#1F386E" />
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appicon.svg" Color="#1F386E" />
+		
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\Splash\gemini3.png" Color="#303030" BaseSize="200,200" />
 
 		<!-- Images -->
-		
+		<MauiImage Include="Resources\Images\kuran.svg" />
+		<MauiImage Include="Resources\Images\vakitler.svg" />
+		<MauiImage Include="Resources\Images\zikirmatik.svg" />
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
@@ -62,6 +65,8 @@
 	<ItemGroup>
 	  <AndroidResource Remove="Platforms\Android\Resources\values\styles.xml" />
 	</ItemGroup>
+
+	
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="9.0.120" />

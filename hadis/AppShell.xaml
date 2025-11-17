@@ -5,17 +5,21 @@
     xmlns:local="clr-namespace:hadis"
     Title="hadis"
     
-    Shell.NavBarIsVisible="False">
-
+    Shell.NavBarIsVisible="False"
+    Shell.TabBarBackgroundColor="{AppThemeBinding Light=White, Dark={StaticResource Gray900}}"
+    
+    Shell.TabBarForegroundColor="{AppThemeBinding Light={StaticResource Primary}, Dark=White}"
+    
+    Shell.TabBarUnselectedColor="{AppThemeBinding Light=Gray, Dark=LightGray}">
     <TabBar>
         
-        <Tab Title="Vakitler" Icon="saat_simgesi.png">
+        <Tab Title="" Icon="vakitler.png">
             <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
         </Tab>
-        <Tab Title="Kuran" Icon="saat_simgesi.png">
+        <Tab Title="" Icon="kuran.png">
             <ShellContent ContentTemplate="{DataTemplate local:KuranPDF}" />
         </Tab>
-        <Tab Title="Zikirmatik" Icon="saat_simgesi.png">
+        <Tab Title="" Icon="zikirmatik.png">
             <ShellContent ContentTemplate="{DataTemplate local:zikirmatik}" />
         </Tab>
 
