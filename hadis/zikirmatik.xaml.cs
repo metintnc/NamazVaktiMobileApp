@@ -74,5 +74,11 @@ namespace hadis
                 }
             }
         }
+
+        private void zikirbutton_SizeChanged(object sender, EventArgs e)
+        {
+            var btn = (Button)sender;
+            btn.WidthRequest = btn.Height;
+        }
     }
 }

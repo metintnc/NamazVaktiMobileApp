@@ -22,7 +22,9 @@
         <Tab Title="" Icon="zikirmatik.png">
             <ShellContent ContentTemplate="{DataTemplate local:zikirmatik}" />
         </Tab>
-
+        <Tab Title="" Icon="kiblesekme.png"> 
+            <ShellContent ContentTemplate="{DataTemplate local:kible}" />
+        </Tab>
 
     </TabBar>
 </Shell>

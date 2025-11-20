@@ -2,20 +2,17 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="hadis.zikirmatik">
-    <ScrollView>
-        <Grid RowDefinitions="Auto,*" Style="{StaticResource Background}" ColumnDefinitions="*" Padding="20">
-            <Label x:Name="zikirsayisi" Style="{StaticResource AnaLabel}" FontAttributes="Bold" Grid.Row="0" Text="0" 
-                   VerticalOptions="Center" HorizontalOptions="Center" FontSize="100"/>
-            <Button x:Name="sifirla" Grid.Row="0" VerticalOptions="Start" HorizontalOptions="End" 
+    <Grid RowDefinitions="Auto,Auto,*" Style="{StaticResource Background}" ColumnDefinitions="*" Padding="20">
+            <Label Text="Zikirmatik" HorizontalOptions="Center" Grid.Row="0" FontSize="20"/>
+            <Label x:Name="zikirsayisi" Style="{StaticResource AnaLabel}" FontAttributes="Bold" Grid.Row="1" Text="0" 
+                   VerticalOptions="Center" HorizontalOptions="Center" FontSize="80"/>
+            <Button x:Name="sifirla" Grid.Row="1" VerticalOptions="Start" HorizontalOptions="End" 
                     BackgroundColor="Silver" CornerRadius="125" Clicked="sifirla_Clicked" HeightRequest="20" WidthRequest="20" />
-            <Label x:Name="ToplamZikir" TextColor="Silver" Text="0" HorizontalOptions="End" VerticalOptions="Start" Margin="0,100,0,0" FontSize="20"/>
+            <Label x:Name="ToplamZikir" TextColor="Silver" Text="0" HorizontalOptions="End" VerticalOptions="Start" Margin="0,0,0,0" FontSize="20"/>
 
-            <Button x:Name="zikirbutton" Grid.Row="1" Padding="10" Clicked="zikirbutton_Clicked" HorizontalOptions="Center" 
-                    VerticalOptions="Center" CornerRadius="125" BorderColor="White" BorderWidth="2"
-                        WidthRequest="250" HeightRequest="250" BackgroundColor="Transparent" />
+            <Button x:Name="zikirbutton" Grid.Row="2" Padding="10" Clicked="zikirbutton_Clicked" HorizontalOptions="Center" VerticalOptions="End" HeightRequest="250" 
+                    WidthRequest="250" CornerRadius="9000000" BorderColor="White" BorderWidth="2" BackgroundColor="Transparent" />
         </Grid>
-            
-    </ScrollView>
-    
-    
+
+
 </ContentPage>

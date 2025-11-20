@@ -8,20 +8,17 @@ namespace hadis
     {
         public static MauiApp CreateMauiApp()
         {
-            // ÖNEMLİ: Syncfusion lisans anahtarınızı buraya eklemelisiniz.
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Ngo9BigBOggjHTQxAR8/V1JFaF1cX2hIf0x0R3xbf1x1ZFBMZVlbRXdPMyBoS35Rc0RjW3xedXFQR2VaVEdxVEFc");
 
             var builder = MauiApp.CreateBuilder();
             builder
-                .UseMauiApp<App>() // 'App' sınıfına referans verir
-                .ConfigureSyncfusionCore() // Syncfusion Core'u yapılandır
+                .UseMauiApp<App>()
+                .ConfigureSyncfusionCore() 
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
-
-            // Diğer servisler (varsa)
 
             return builder.Build();
         }

@@ -2,11 +2,32 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="hadis.MainPage" Shell.NavBarIsVisible="False">
-    
-    <ScrollView>
-        <Grid Style="{StaticResource Background}" RowDefinitions="Auto,Auto,Auto,Auto" ColumnDefinitions="*" Padding="20" >
-            <StackLayout Grid.Row="0" Spacing="10"> 
-                <Frame  Style="{StaticResource BorderFrame}" HasShadow="True" Padding="20" BackgroundColor="Transparent" CornerRadius="20">
+
+
+    <Grid>
+        <Image
+   Aspect="AspectFill"
+   HorizontalOptions="FillAndExpand"
+   VerticalOptions="FillAndExpand" >
+            <Image.Source>
+                <AppThemeBinding Light="bg_light.jpg" Dark="bg_dark.jpg" />
+            </Image.Source>
+        </Image>
+        <BoxView HorizontalOptions="FillAndExpand"
+             VerticalOptions="FillAndExpand">
+            <BoxView.Color>
+                <AppThemeBinding Light="White" Dark="Black" />
+            </BoxView.Color>
+            <BoxView.Opacity>
+                <AppThemeBinding Light="0.85" Dark="0.3" />
+            </BoxView.Opacity>
+        </BoxView>
+
+        <Grid Style="{StaticResource Background}" RowDefinitions="Auto,Auto,Auto,Auto" ColumnDefinitions="*" Padding="20" Margin="0,30,0,0" >
+
+
+            <StackLayout Grid.Row="0" Spacing="10">
+                <Frame  Style="{StaticResource BorderFrame}" HasShadow="True" Padding="20" BackgroundColor="Transparent" CornerRadius="15">
                     <StackLayout Spacing="5" HorizontalOptions="Center">
                         <Label Style="{StaticResource AnaLabel}" x:Name="namazismi" Text="" HorizontalOptions="Center" FontSize="25" />
                         <Label Style="{StaticResource AnaLabel}" x:Name="kalan" Text =" - - "  HorizontalOptions="Center" FontSize="45" />
@@ -15,7 +36,7 @@
                 </Frame>
             </StackLayout>
 
-            <Grid Grid.Row="1" ColumnDefinitions="*,*,*" RowSpacing ="30" ColumnSpacing="10" Margin="0,10,0,0" >
+            <Grid Grid.Row="1" ColumnDefinitions="*,*,*" RowSpacing ="30" ColumnSpacing="10" Margin="0,20,0,0" >
 
                 <StackLayout Grid.Column="0" Spacing="10" >
                     <Frame Style="{StaticResource BorderFrame}" HasShadow="True" BackgroundColor="Transparent" CornerRadius="20" Padding="10">
@@ -25,7 +46,7 @@
                         </StackLayout>
                     </Frame>
                 </StackLayout>
-                
+
                 <StackLayout Grid.Column="1" Spacing="10">
                     <Frame Style="{StaticResource BorderFrame}" HasShadow="True" BackgroundColor="Transparent" CornerRadius="20" Padding="10">
                         <StackLayout Spacing="5" HorizontalOptions="Center">
@@ -73,7 +94,7 @@
                     </Frame>
                 </StackLayout>
             </Grid>
-            <Grid Grid.Row="3" ColumnDefinitions="*" RowSpacing="30" Margin="0,10,0,0" >
+            <Grid Grid.Row="3" ColumnDefinitions="*" RowSpacing="30" Margin="0,30,0,0" >
                 <Frame VerticalOptions="Center" Style="{StaticResource ayetframe}">
                     <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
                         <Label x:Name="gununayeti" Text="" Style="{StaticResource AnaLabel}" LineBreakMode="WordWrap"/>
@@ -81,8 +102,8 @@
                 </Frame>
 
             </Grid>
-            
+
 
         </Grid>
-    </ScrollView>
+    </Grid>
 </ContentPage>

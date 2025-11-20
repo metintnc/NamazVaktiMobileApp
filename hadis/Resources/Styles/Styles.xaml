@@ -4,17 +4,28 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
-
+    <Style TargetType="Image" x:Key="KibleOk">
+        <Setter Property="Source" Value="{AppThemeBinding Light=kibleoklight.png,Dark=kibleokdark.png}"/>
+    </Style>
     <Style TargetType="Frame" x:Key="BorderFrame">
-        <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource FrameColorDark}, Dark={StaticResource FrameColorDark}}" />
+        <Setter Property="BorderColor" Value="{AppThemeBinding Light=#00796B, Dark=#26A69A}" />
+        
     </Style>
 
     <Style TargetType="Grid" x:Key="Background">
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource BackGroundColorLight}, Dark={StaticResource BackGroundColorDark}}" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
     </Style>
 
     <Style TargetType="Label" x:Key="AnaLabel">
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource AnalaLabelLight}, Dark={StaticResource White}}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light=#009688, Dark={StaticResource White}}" />
+        <Setter Property="Shadow">
+            <Setter.Value>
+                <Shadow Brush="{AppThemeBinding Light=Transparent, Dark=Black}" 
+                    Offset="2,2" 
+                    Radius="5" 
+                    Opacity="0.8"/>
+            </Setter.Value>
+        </Setter>
     </Style>
 
     <Style TargetType="TabbedPage" x:Key="sekme">
@@ -22,19 +33,11 @@
     </Style>
     
     <Style TargetType="Frame" x:Key="ayetframe">
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource AyetLight}, Dark={StaticResource AyetDark}}" />
-        <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light=#E0F2F1, Dark=#E6102825}" />
+        <Setter Property="BorderColor" Value="{AppThemeBinding Light=#00796B, Dark=#26A69A}" />
+        <Setter Property="CornerRadius" Value="15"/>
     </Style>
 
-
-    <Style TargetType="ActivityIndicator">
-        <Setter Property="Color" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
-    </Style>
-
-    <Style TargetType="IndicatorView">
-        <Setter Property="IndicatorColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray500}}"/>
-        <Setter Property="SelectedIndicatorColor" Value="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray100}}"/>
-    </Style>
 
     <Style TargetType="Border">
         <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray500}}" />
@@ -42,9 +45,6 @@
         <Setter Property="StrokeThickness" Value="1"/>
     </Style>
 
-    <Style TargetType="BoxView">
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray200}}" />
-    </Style>
 
     <Style TargetType="Button">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource PrimaryDarkText}}" />
