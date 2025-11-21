@@ -2,17 +2,38 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="hadis.zikirmatik">
-    <Grid RowDefinitions="Auto,Auto,*" Style="{StaticResource Background}" ColumnDefinitions="*" Padding="20">
+
+    <Grid>
+        <Image
+    Aspect="AspectFill"
+    HorizontalOptions="FillAndExpand"
+    VerticalOptions="FillAndExpand" >
+            <Image.Source>
+                <AppThemeBinding Light="bg_light.jpg" Dark="bg_dark.jpg" />
+            </Image.Source>
+        </Image>
+        <BoxView HorizontalOptions="FillAndExpand"
+    VerticalOptions="FillAndExpand">
+            <BoxView.Color>
+                <AppThemeBinding Light="White" Dark="Black" />
+            </BoxView.Color>
+            <BoxView.Opacity>
+                <AppThemeBinding Light="0.65" Dark="0.3" />
+            </BoxView.Opacity>
+        </BoxView>
+
+        <Grid RowDefinitions="Auto,Auto,*" Style="{StaticResource Background}" ColumnDefinitions="*" Padding="20">
+
             <Label Text="Zikirmatik" HorizontalOptions="Center" Grid.Row="0" FontSize="20"/>
             <Label x:Name="zikirsayisi" Style="{StaticResource AnaLabel}" FontAttributes="Bold" Grid.Row="1" Text="0" 
                    VerticalOptions="Center" HorizontalOptions="Center" FontSize="80"/>
             <Button x:Name="sifirla" Grid.Row="1" VerticalOptions="Start" HorizontalOptions="End" 
-                    BackgroundColor="Silver" CornerRadius="125" Clicked="sifirla_Clicked" HeightRequest="20" WidthRequest="20" />
+                    BackgroundColor="{AppThemeBinding Light=#00796B, Dark=#26A69A}" CornerRadius="125" Clicked="sifirla_Clicked" HeightRequest="20" WidthRequest="20" />
             <Label x:Name="ToplamZikir" TextColor="Silver" Text="0" HorizontalOptions="End" VerticalOptions="Start" Margin="0,0,0,0" FontSize="20"/>
 
-            <Button x:Name="zikirbutton" Grid.Row="2" Padding="10" Clicked="zikirbutton_Clicked" HorizontalOptions="Center" VerticalOptions="End" HeightRequest="250" 
-                    WidthRequest="250" CornerRadius="9000000" BorderColor="White" BorderWidth="2" BackgroundColor="Transparent" />
+            <Button x:Name="zikirbutton" Margin="50" Grid.Row="2" Padding="10" Clicked="zikirbutton_Clicked" HorizontalOptions="Center" VerticalOptions="End" HeightRequest="250" 
+                    WidthRequest="250" CornerRadius="9000000" BorderColor="{AppThemeBinding Light=#00796B, Dark=#26A69A}" BorderWidth="2" BackgroundColor="Transparent" />
         </Grid>
-
+    </Grid>
 
 </ContentPage>

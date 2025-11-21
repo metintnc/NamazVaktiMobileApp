@@ -31,7 +31,24 @@ namespace hadis
         {
             MainThread.BeginInvokeOnMainThread(async () =>
             {
-                await kibleoku.RotateTo(gelenaci, 15, Easing.Linear);
+                if(gelenaci < 180)
+                {
+                    await kibleoku.RotateTo(gelenaci, 150, Easing.Linear);
+                }
+                else
+                {
+                    await kibleoku.RotateTo(gelenaci -360, 150, Easing.Linear);
+                }
+                    AciDegeri.Text = $"{360 - gelenaci:F0}°";
+                int a = Convert.ToInt32(gelenaci);
+                if(360 - a == 0)
+                {
+                    AciDegeri.TextColor = Colors.Gold;
+                }
+                else
+                {
+                    AciDegeri.ClearValue(Label.TextColorProperty);
+                }
             });
         }
     }
